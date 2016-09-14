@@ -11,7 +11,7 @@ if (10<=20) {
  // = assign to variable
  var myPassword = "Bananas";
 // == compare values
-    if (1==1) {
+    if (2==2) {
         console.log("one is equal to one");
     }
 // != not equal to
