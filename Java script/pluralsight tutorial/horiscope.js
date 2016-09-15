@@ -16,6 +16,9 @@ switch (sign) {
     case "leo":
         alert("Your emotions will make you eat something today");
         break;
+    case "Gemeni":
+        alert("Get off the computer and go draw something!");
+        break;
 
     default:
     alert("please enter a valid sign.");
