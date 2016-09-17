@@ -53,6 +53,7 @@ while (randomNumber>1) {
     } 
     randomNumber--
 }
+ restartGame();
 }
     
 
