@@ -2,7 +2,7 @@
 
 var beginingSenarios =["It is the zombie apocalypse! You are desperate. You break into a store and begin looting",
 "You wake up alone in a field with nothing but the clothes on your back, you start making your way to the edge of the clearing.",
-"You wake up in the pasenger seat of a crashed car, your memory is foggy, there is movement outside and you realize they are all zombies"]
+"You wake up in the passenger seat of a crashed car, your memory is foggy, there is movement outside and you realize they are all zombies"]
 
 function numberRandom1 (range){
     return Math.round (Math.random() * range );
@@ -10,9 +10,9 @@ function numberRandom1 (range){
 
 alert(beginingSenarios [numberRandom1 (beginingSenarios.length -1)]);
      
-var weaponList = ["can of beans", "shovel", "whoopie coushin", "severed arm", "pistol", "pencil"];
+var weaponList = ["can of beans", "shovel", "whoopie cushion", "severed arm", "pistol", "pencil"];
     var weapon  = weaponList [numberRandom1 (weaponList.length -1)];
-     alert("Seeing how it is the Zombie apocalypse you need something to attack with. Looking arround you find a " + weapon + "!");
+     alert("Seeing how it is the Zombie apocalypse you need something to attack with. Looking around you find a " + weapon + "!");
 var randomNumber = Math.round(Math.random()*3);
     console.log (randomNumber);
 
@@ -36,7 +36,7 @@ var r = confirm("Do you attack the Zombie with your " + weapon +"?");
     } 
     }
     else {
-        alert("While your just standing there just dumb as stupid, the Zombie starts eating you, you lose");
+        alert("While you're just standing there looking just plain dumb and stupid, the Zombie starts eating you, you lose");
         restartGame();
     }
 }
