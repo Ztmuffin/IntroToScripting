@@ -26,18 +26,18 @@ var player1 = {
     characterClass: prompt("Before the zombies came, you were one of three things. Were you a Solder, Civilian, or Hunter?").toLowerCase()
 };
 
-if(!player1.name)
+if(!player1.name) {
     window.alert("You didn't enter any name. You're now going to be called Garry Paulmer");
     player1.name = "Garry Paulmer";
-
+}
 if (player1.characterClass === "solder") {
     window.alert("Pleasure to meet you solder. Best of luck.");
 }
 if (player1.characterClass === "civilian") {
-     window.alert("Pleasure to meet you "+player1.name+". Best of luck.");
+     window.alert("Pleasure to meet you "+ player1.name +". Best of luck.");
 }
 if (player1.characterClass === "hunter") {
-     window.alert("Pleasure to meet you "+player1.name+". Best of luck. Hope you can hunt zombies");
+     window.alert("Pleasure to meet you "+ player1.name +". Best of luck. Hope you can hunt zombies");
 }
 
 
