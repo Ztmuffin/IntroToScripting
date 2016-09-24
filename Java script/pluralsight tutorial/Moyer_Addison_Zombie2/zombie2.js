@@ -2,6 +2,8 @@
 
 */
 var outcome;
+var randomNumber = Math.round(Math.random()*3);
+    console.log (randomNumber);
 
 window.alert ("If you have not realized this already, you have now found yourself in the Zombie apocalypse. "+
 " It is either win or lose, you are alive now but will you stay that way? ");
@@ -38,13 +40,15 @@ if (player1.characterClass === "hunter") {
     player1.strength = 9;
 }
 
-  alert("A zombie is approaching you!");
+
+
+  window.alert("A zombie is approaching you!");
     doYouattack();
 
 function doYouattack (){
-var r = confirm("Do you attack the Zombie with your " + weapon +"?");
+var r = confirm("Do you attack the Zombie?");
     if (r == true) {
-        alert("You slash at the zombie with your "+ weapon +"!");
+        alert("You slash at the zombie with your hands");
         if (randomNumber === 1){
         alert("The zombie bites you, you lose!");
         restartGame();
@@ -53,7 +57,7 @@ var r = confirm("Do you attack the Zombie with your " + weapon +"?");
             alert("You miss! Though the zombie was just looking for brains. Your head looks more like a pumpkin and he ignores you.");
             Level2();
     }   else if(randomNumber === 2){
-        alert("You kill the zombie with your "+ weapon + " You Win!");
+        alert("You kill the zombie with your hands You Win!");
         Level2();
     } 
     }
@@ -71,7 +75,7 @@ while (randomNumber>1) {
         if (randomNumber === 3){
             alert("Even That zombie was just looking for brains. Your head still looked like a pumpkin and he walks past you. GET THAT THING CHECKED OUT");
     }   else if(randomNumber === 2){
-        alert("That one you kill with your "+ weapon + " You Win!");
+        alert("That one you kill with your You Win!");
     } 
     randomNumber--
 }
@@ -93,9 +97,3 @@ function restartGame()
     }
 } 
 
-
-if (outcome === "lose") {
-    window.alert("You Lose!");
-}else if (outcome === "win") {
-    window.alert ("You win!");
-}
