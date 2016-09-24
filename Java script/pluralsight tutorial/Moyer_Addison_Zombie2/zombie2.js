@@ -31,13 +31,13 @@ if(!player1.name)
     player1.name = "Garry Paulmer";
 
 if (player1.characterClass === "solder") {
-    player1.strength = 10;
+    window.alert("Pleasure to meet you solder. Best of luck.");
 }
 if (player1.characterClass === "civilian") {
-    player1.strength = 5;
+     window.alert("Pleasure to meet you "+player1.name+". Best of luck.");
 }
 if (player1.characterClass === "hunter") {
-    player1.strength = 9;
+     window.alert("Pleasure to meet you "+player1.name+". Best of luck. Hope you can hunt zombies");
 }
 
 
