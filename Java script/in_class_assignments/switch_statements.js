@@ -1,6 +1,6 @@
  
  var theExample;
- var demonstrate = "yes".toLowerCase;
+ var demonstrate = "yes";
 
  console.log (demonstrate);
     switch (demonstrate) {
