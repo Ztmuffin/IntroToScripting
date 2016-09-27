@@ -1,6 +1,6 @@
  
  var theExample;
- var demonstrate = "yes";
+ var demonstrate = "no";
 
  console.log (demonstrate);
     switch (demonstrate) {
