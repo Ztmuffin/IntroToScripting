@@ -1,16 +1,18 @@
  
  var theExample;
- var demonstrate = "no";
+ var i = "10";
+ // prompt ("On a scale of one to 10 how much do you enjoy using switch statements?");
+   var i = parseInt(i);
 
- console.log (demonstrate);
-    switch (demonstrate) {
-        case "yes":
-            theExample = "So do I, they're great!";
+ console.log (i);
+    switch (i) {
+        case i >= 7:
+            theExample = "I feel the same, they're great!";
             break;
-        case "no":
+        case i >= 4 && i <7:
             theExample = "you should like them, they're great!";
             break;
-        case "sometimes":
+        case i <= 3:
             theExample = "Why not all the time? They're great";
             break;
         default:
