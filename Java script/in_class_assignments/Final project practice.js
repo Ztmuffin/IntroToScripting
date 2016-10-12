@@ -3,23 +3,29 @@
 var button = document.getElementById('name');
 var beginGame = function gameButton() {
 
-    var player = function () {}
-var playerUser = new player();
-
-function playerInfo(currentPlayer, health, strength, speed, stealth) {
-    currentPlayer.name = prompt("Who are you?"),
-    currentPlayer.health = 10
-    currentPlayer.strength = "Strong"
-    currentPlayer.speed = 50;
-    currentPlayer.stealth = function () {
-        if (health <= 5) {
-           stealth = "Good";
-        } else { stealth = "Poor"; 
+    var player = function () {
+        var name;
+        var health = 10;
+        var strength = "Strong";
+        var speed = 50;
+        this.stealth = "good";
+        this.updateStealth = function (stealth) {
+            if (health <= 5) {
+            this.stealth = "Poor";
+            } else { this.stealth = "Good"; 
+            }
         }
     }
-}
+var playerUser = new player();
 
-playerInfo(playerUser,10,"Strong", 50 );
+function playerUpdateInfo (currentPlayer, healthUpdate, strengthUpdate, speedUpdate) {
+    currentPlayer.name = prompt("Captain, What is your name?"),
+    currentPlayer.health = healthUpdate;
+    currentPlayer.strength = strengthUpdate;
+    currentPlayer.speed = speedUpdate;
+    
+        }
+playerUpdateInfo (playerUser,4,"AMAZING", 60 );
 
 if (!playerUser.name) {
     alert ("please enter a name")
@@ -78,8 +84,7 @@ alert("As you are looking for a weapon something approaches");
            alert("You find a Pistol and take out the goul that was chasing you down.")
        }
    
-
-}   
+} 
 button.addEventListener('click', beginGame);
 
 // learn how to add a list of options for adding}
