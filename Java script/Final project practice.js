@@ -2,6 +2,9 @@
 
 var button = document.getElementById('name');
 var beginGame = function gameButton() {
+    }
+button.addEventListener('click', beginGame);
+
     var player = function () {
         var health = 10,
         var strength = "high",
@@ -16,12 +19,18 @@ var beginGame = function gameButton() {
 }
 var playerUser = new player();
 
-function playerInfo(currentPlayer, health, strength, speed) {
-    currentPlayer.name = prompt("Who are you?")
+function playerInfo(currentPlayer, health, strength, speed, stealth) {
+    currentPlayer.name = prompt("Who are you?"),
+    currentPlayer.health = 10
 }
+playerInfo(playerUser);
 
-}
-button.addEventListener('click', beginGame);
+
+console.log (playerUser.name);
+console.log (playerUser.health);
+console.log (playerUser.strength);
+console.log (playerUser.speed);
+console.log (playerUser.stealth);
 
 // remember how to add an object maker.
 // make as objects Player, Enimies 3, weapons
