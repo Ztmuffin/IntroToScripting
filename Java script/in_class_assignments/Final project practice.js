@@ -18,14 +18,14 @@ var beginGame = function gameButton() {
     }
 var playerUser = new player();
 
-function playerUpdateInfo (currentPlayer, healthUpdate, strengthUpdate, speedUpdate) {
+function updatePlayer (currentPlayer, healthUpdate, strengthUpdate, speedUpdate) {
     currentPlayer.name = prompt("Captain, What is your name?"),
     currentPlayer.health = healthUpdate;
     currentPlayer.strength = strengthUpdate;
     currentPlayer.speed = speedUpdate;
     
         }
-playerUpdateInfo (playerUser,4,"AMAZING", 60 );
+updatePlayer (playerUser,10,"Strong", 60 );
 
 if (!playerUser.name) {
     alert ("please enter a name")
@@ -35,11 +35,7 @@ if (!playerUser.name) {
     alert("Okay, "+ playerUser.name +" You begin with: "+ playerUser.health + " health.    "
 +playerUser.strength +" strength.   " + playerUser.speed + " Speed.     and " +playerUser.stealth +" Stealth"
  )
-console.log (playerUser.name);
-console.log (playerUser.health);
-console.log (playerUser.strength);
-console.log (playerUser.speed);
-console.log (playerUser.stealth);
+
 
 
     alert ("In a post apocaliptic world you're our only hope! "+ playerUser.name + " can we trust you to protect and save us? Pres OK if you accept the challenge");
@@ -52,8 +48,11 @@ console.log (playerUser.stealth);
     }
     alert(beginingSenarios [randomNumber (beginingSenarios.length -1)]);
 }
+
+
 // make as objects: Enimies 3, weapons
-var enimy = function EnimyMaker (params) {
+
+var enimy = function () {
     var damageGiven = 2;
     var health = 2;
     var speed = 25;
@@ -62,29 +61,60 @@ var enimy = function EnimyMaker (params) {
     var enimy2 = new enimy();
     var enimy3 = new enimy();
 
- function updateEnimy (enimyNumber, damageGiven, health, speed) {
-    updateEnimy.enimyNumber = "Goul";
-    updateEnimy.damageGiven = 2;
-    updateEnimy.health = 10;
-    updateEnimy.speed = 25;
+ function updateEnimy (currentEnimy, damageUpdate, healthUpdate, speedUpdate) {
+    currentEnimy.name = "Goblin"
+    currentEnimy.damageGiven = damageUpdate;
+    currentEnimy.health = healthUpdate;
+    currentEnimy.speed = speedUpdate;
 
     }
 
-alert("As you are looking for a weapon something approaches");
+alert("As you are looking for a weapon a Goblin approaches");
        var RandomNumber1 = Math.round(Math.random()*2);
        console.log(RandomNumber1);
        if (RandomNumber1>1) {
            updateEnimy(enimy1,4,10,75);
-           console.log (updateEnimy.enimyNumber);
-           console.log (updateEnimy.damageGiven);
-           console.log (updateEnimy.health);
-           console.log (updateEnimy.speed);
-
-       } else {
-           alert("You find a Pistol and take out the goul that was chasing you down.")
+           updatePlayer(playerUser,6,"Fair", 50);
+           alert("You took some damage from the Goblin! Though you killed them with a fork you found, they attacked you first.")
+           alert("Okay, "+ playerUser.name +" You're down to: "+ playerUser.health + " health.    "
+            +playerUser.strength +" strength.   " + playerUser.speed + " Speed.")
+        } else {
+           alert(playerUser.name +" you find a sharpened stake and luckily take out the Goblin that was chasing you down.")
+           updateEnimy(enimy1,0,0,0)
+           alert("Okay, "+ playerUser.name +" You're down to: "+ playerUser.health + " health.    "
+            +playerUser.strength +" strength.   " + playerUser.speed + " Speed.")
        }
-   
-} 
+   } 
 button.addEventListener('click', beginGame);
+while (playerUser.health > 0) {
+   //do nothing 
+}else { alert("you loose!");
+    restartGame();
+}
+function level2 () {
+   alert("you've found a weapon now, a rifle.  Another Goblin approaches, lets see if you know how to use that rifle");
+   
+}
 
+function restartGame () {
+    var q = confirm();
+    if (q== true) {
+        window.location.reload();
+    } else {
+        // Do nothing
+    }
+}
 // learn how to add a list of options for adding}
+/*
+           console.log (enimy1.name);
+           console.log (enimy1.damageGiven);
+           console.log (enimy1.health);
+           console.log (enimy1.speed);
+
+
+console.log (playerUser.name);
+console.log (playerUser.health);
+console.log (playerUser.strength);
+console.log (playerUser.speed);
+console.log (playerUser.stealth);
+           */
